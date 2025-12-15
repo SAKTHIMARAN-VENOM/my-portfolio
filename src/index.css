@@ -1,0 +1,153 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 222 47% 5%;
+    --foreground: 210 40% 90%;
+    --card: 222 47% 7%;
+    --card-foreground: 210 40% 90%;
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 90%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 222 47% 5%;
+    --secondary: 320 100% 50%;
+    --secondary-foreground: 222 47% 5%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 180 100% 50%;
+    --accent-foreground: 222 47% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 180 100% 50%;
+    --chart-1: 180 100% 50%;
+    --chart-2: 320 100% 50%;
+    --chart-3: 280 80% 60%;
+    --chart-4: 200 80% 60%;
+    --chart-5: 340 80% 60%;
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 217 32% 17%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 217 32% 17%;
+    --sidebar-ring: 180 100% 50%;
+    
+    --neon-cyan: 180 100% 50%;
+    --neon-magenta: 320 100% 50%;
+    --neon-purple: 280 80% 60%;
+    --neon-blue: 200 80% 60%;
+    
+    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.5);
+    --glow-magenta: 0 0 20px hsl(320 100% 50% / 0.5);
+    --glow-strong: 0 0 40px hsl(180 100% 50% / 0.6);
+    
+    --gradient-neon: linear-gradient(135deg, hsl(180 100% 50%), hsl(320 100% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 5%), hsl(222 47% 7%));
+    --gradient-glow: radial-gradient(circle at center, hsl(180 100% 50% / 0.1), transparent);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 90%;
+    --card: 222 47% 7%;
+    --card-foreground: 210 40% 90%;
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 90%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 222 47% 5%;
+    --secondary: 320 100% 50%;
+    --secondary-foreground: 222 47% 5%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 180 100% 50%;
+    --accent-foreground: 222 47% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 180 100% 50%;
+    --chart-1: 180 100% 50%;
+    --chart-2: 320 100% 50%;
+    --chart-3: 280 80% 60%;
+    --chart-4: 200 80% 60%;
+    --chart-5: 340 80% 60%;
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 217 32% 17%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 217 32% 17%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .neon-glow {
+    box-shadow: var(--glow-cyan);
+  }
+  
+  .neon-glow-strong {
+    box-shadow: var(--glow-strong);
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.8),
+                 0 0 20px hsl(var(--neon-cyan) / 0.6),
+                 0 0 30px hsl(var(--neon-cyan) / 0.4);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  .scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
+  }
+  
+  .scroll-snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
