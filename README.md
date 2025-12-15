@@ -1,8 +1,5 @@
-# Welcome to Your Miaoda Project
-Miaoda Application Link URL
-    URL:https://medo.dev/projects/app-88at4zfeaqrm
 
-# Portfolio Website - Alex Morgan
+# Portfolio Website - M SAKTHIMARAN
 
 A modern, interactive portfolio website featuring an immersive multi-stage intro sequence with device scanning effects, followed by a comprehensive portfolio showcase.
 
@@ -206,4 +203,4 @@ MIT License - feel free to use this template for your own portfolio!
 
 ---
 
-2025 Alex Morgan
+2025 M SAKTHIMARAN
